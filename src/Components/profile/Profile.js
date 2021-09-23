@@ -1,13 +1,12 @@
 import React from "react";
-import data from "../../data";
 import Description from "./description/Description";
 import Stats from "./stats/Stats";
 
-const Profile = () => {
+const Profile = ({ user }) => {
   return (
     <div>
-      <Description user={data.user} />
-      <Stats stats={data.user.stats} />
+      <Description user={user} />
+      <Stats stats={user.stats} />
     </div>
   );
 };
