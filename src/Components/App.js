@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Profile from "./profile/Profile";
 import data from "../data";
 import Statistics from "./statistics/Statistics";
@@ -16,6 +17,13 @@ const App = () => {
       <TransactionHistory transactions={transactions} />
     </>
   );
+};
+
+App.propTypes = {
+  user: PropTypes.object,
+  statData: PropTypes.arrayOf(PropTypes.object),
+  friends: PropTypes.arrayOf(PropTypes.object),
+  transactions: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default App;

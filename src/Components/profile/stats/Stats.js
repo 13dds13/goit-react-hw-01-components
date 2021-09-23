@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StatsData from "./statsData/StatsData";
 
 const Stats = ({ stats }) => {
@@ -9,6 +10,10 @@ const Stats = ({ stats }) => {
       ))}
     </ul>
   );
+};
+
+Stats.propTypes = {
+  stats: PropTypes.object,
 };
 
 export default Stats;

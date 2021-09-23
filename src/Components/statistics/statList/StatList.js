@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StatListItem from "./statListItem/StatListItem";
 
 const StatList = ({ stats }) => {
@@ -9,6 +10,16 @@ const StatList = ({ stats }) => {
       ))}
     </ul>
   );
+};
+
+StatList.propType = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
 
 export default StatList;

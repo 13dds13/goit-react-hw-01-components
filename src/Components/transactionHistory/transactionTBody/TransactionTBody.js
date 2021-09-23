@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import TransactionTRow from "./transactionTRow/TransactionTRow";
 
 const TransactionTBody = ({ transactions }) => {
@@ -9,6 +10,10 @@ const TransactionTBody = ({ transactions }) => {
       ))}
     </tbody>
   );
+};
+
+TransactionTBody.propTypes = {
+  transactions: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default TransactionTBody;
