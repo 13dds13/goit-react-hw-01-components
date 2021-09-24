@@ -2,3 +2,7 @@
   border: 1px solid #000000;
   border-collapse: collapse;
 }
+
+.grayBgr {
+  background-color: rgb(179, 208, 250);
+}
