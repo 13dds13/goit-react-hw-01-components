@@ -4,7 +4,7 @@ import styles from "./Description.module.css";
 
 const Description = ({ user }) => {
   return (
-    <div className={styles.description}>
+    <div className={styles.descriptionWrap}>
       <DescriptionInfo user={user} />
     </div>
   );

@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./StatListItem.module.css";
 
 const StatListItem = ({ label, percentage }) => {
   return (
-    <li>
+    <li className={styles.listItem}>
       <span>{label} </span>
-      <span>{percentage}%</span>
+      <span className={styles.value}>{percentage}%</span>
     </li>
   );
 };

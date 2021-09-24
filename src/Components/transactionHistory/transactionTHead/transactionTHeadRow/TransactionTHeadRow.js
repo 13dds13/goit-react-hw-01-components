@@ -1,11 +1,12 @@
 import React from "react";
+import styles from "../../transactionTBody/transactionTRow/TransactionTRow.module.css";
 
 const TransactionTHeadRow = () => {
   return (
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <th className={styles.tableData}>Type</th>
+      <th className={styles.tableData}>Amount</th>
+      <th className={styles.tableData}>Currency</th>
     </tr>
   );
 };

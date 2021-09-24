@@ -1,7 +1,9 @@
-.descriptionWrap {
+.container {
+  display: flex;
   padding: 8px;
-  margin-bottom: 12px;
   text-align: center;
   background-color: #ffffff;
   border-radius: 4px;
+
+  list-style: none;
 }

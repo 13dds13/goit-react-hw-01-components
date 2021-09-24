@@ -1,0 +1,12 @@
+.container {
+  width: 256px;
+  margin-bottom: 32px;
+  padding: 8px;
+  text-align: center;
+  background-color: #98bde0;
+  border-radius: 4px;
+}
+
+.title {
+  margin-bottom: 12px;
+}

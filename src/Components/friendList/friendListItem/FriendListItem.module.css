@@ -1,0 +1,38 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: bisque;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 0 24px;
+}
+
+.img {
+  margin-left: 24px;
+}
+
+.activity {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: activity;
+  background-color: chartreuse;
+}
+
+.offline {
+  composes: activity;
+  background-color: rgb(255, 0, 0);
+}

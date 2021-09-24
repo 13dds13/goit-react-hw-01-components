@@ -4,7 +4,7 @@ import StatList from "./statList/StatList";
 
 const Statistics = ({ stats }) => {
   return (
-    <Section>
+    <Section title="Upload stats">
       <StatList stats={stats} />
     </Section>
   );

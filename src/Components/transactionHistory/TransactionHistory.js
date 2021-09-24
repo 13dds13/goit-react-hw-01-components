@@ -1,10 +1,11 @@
 import React from "react";
 import TransactionTBody from "./transactionTBody/TransactionTBody";
 import TransactionTHead from "./transactionTHead/TransactionTHead";
+import styles from "./TransactionHistory.module.css";
 
 const TransactionHistory = ({ transactions }) => {
   return (
-    <table>
+    <table className={styles.table}>
       <TransactionTHead />
       <TransactionTBody transactions={transactions} />
     </table>

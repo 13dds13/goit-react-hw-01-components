@@ -1,6 +1,7 @@
 .container {
   width: 256px;
   padding: 12px;
+  margin-bottom: 32px;
   background-color: rgb(199, 199, 199);
   border-radius: 5px;
 }
