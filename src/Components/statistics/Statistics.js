@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../Section";
+import Section from "./section/Section";
 import StatList from "./statList/StatList";
 
 const Statistics = ({ stats }) => {
