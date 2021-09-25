@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./StatListItem.module.css";
 
 const StatListItem = ({ label, percentage }) => {
@@ -8,6 +9,11 @@ const StatListItem = ({ label, percentage }) => {
       <span className={styles.value}>{percentage}%</span>
     </li>
   );
+};
+
+StatListItem.propType = {
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };
 
 export default StatListItem;

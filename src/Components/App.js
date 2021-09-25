@@ -1,19 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Profile from "./profile/Profile";
-import data from "../data";
 import Statistics from "./statistics/Statistics";
 import FriendList from "./friendList/FriendList";
 import TransactionHistory from "./transactionHistory/TransactionHistory";
-import Container from "../services/container/Container";
+import Container from "./container/Container";
 
-const { user, statData, friends, transactions } = data;
-
-const App = () => {
+const App = ({ data }) => {
+  const { user, statData, friends, transactions } = data;
+  const { name, tag, location, avatar, stats } = user;
   return (
     <Container>
-      <Profile user={user} />
-      <Statistics stats={statData} />
+      <Profile
+        name={name}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
+      />
+      <Statistics stats={statData} title={"Upload stats"} />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
     </Container>
@@ -21,10 +26,12 @@ const App = () => {
 };
 
 App.propTypes = {
-  user: PropTypes.object,
-  statData: PropTypes.arrayOf(PropTypes.object),
-  friends: PropTypes.arrayOf(PropTypes.object),
-  transactions: PropTypes.arrayOf(PropTypes.object),
+  data: PropTypes.shape({
+    user: PropTypes.object,
+    statData: PropTypes.arrayOf(PropTypes.object),
+    friends: PropTypes.arrayOf(PropTypes.object),
+    transactions: PropTypes.arrayOf(PropTypes.object),
+  }),
 };
 
 export default App;

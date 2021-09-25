@@ -1,10 +1,13 @@
 import React from "react";
-import TransactionTHeadRow from "./transactionTHeadRow/TransactionTHeadRow";
-import styles from "./TransactionTHead.module.css";
+import styles from "../transactionTBody/transactionTRow/TransactionTRow.module.css";
 const TransactionTHead = () => {
   return (
     <thead className={styles.tableHead}>
-      <TransactionTHeadRow />
+      <tr>
+        <th className={styles.tableData}>Type</th>
+        <th className={styles.tableData}>Amount</th>
+        <th className={styles.tableData}>Currency</th>
+      </tr>
     </thead>
   );
 };
